@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ButtonLogin = new System.Windows.Forms.Button();
             this.PasswordField = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LoginField = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.MainPanel.Controls.Add(this.button1);
+            this.MainPanel.Controls.Add(this.ButtonLogin);
             this.MainPanel.Controls.Add(this.PasswordField);
             this.MainPanel.Controls.Add(this.pictureBox2);
             this.MainPanel.Controls.Add(this.LoginField);
@@ -60,21 +60,22 @@
             this.MainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseDown);
             this.MainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseMove);
             // 
-            // button1
+            // ButtonLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Book Antiqua", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(91, 337);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(272, 64);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ButtonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ButtonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonLogin.FlatAppearance.BorderSize = 0;
+            this.ButtonLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ButtonLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonLogin.Font = new System.Drawing.Font("Book Antiqua", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonLogin.Location = new System.Drawing.Point(91, 337);
+            this.ButtonLogin.Name = "ButtonLogin";
+            this.ButtonLogin.Size = new System.Drawing.Size(272, 64);
+            this.ButtonLogin.TabIndex = 5;
+            this.ButtonLogin.Text = "Войти";
+            this.ButtonLogin.UseVisualStyleBackColor = false;
+            this.ButtonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // PasswordField
             // 
@@ -184,6 +185,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox LoginField;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ButtonLogin;
     }
 }
