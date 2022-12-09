@@ -13,7 +13,7 @@ namespace RevievBook
 
         public void OpenConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (connection.State == System.Data.ConnectionState.Closed)
             {
                 connection.Open();
             }

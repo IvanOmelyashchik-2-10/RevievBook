@@ -19,7 +19,7 @@ namespace RevievBook
             this.PasswordField.AutoSize = false; 
             this.PasswordField.Size = new Size(this.PasswordField.Size.Width, 64);
         }
-
+        #region Действия с кнопкой закрытия
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,8 +34,8 @@ namespace RevievBook
         {
             CloseButton.ForeColor = Color.White;
         }
-
-
+        #endregion
+        #region Перемещение левой кнопкой мыши
         Point LastPoint;
         private void MainPanel_MouseMove(object sender, MouseEventArgs e)
         {
@@ -50,7 +50,7 @@ namespace RevievBook
         {
             LastPoint = new Point(e.X, e.Y); 
         }
-
+        #endregion
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
             String loginUser = LoginField.Text;
