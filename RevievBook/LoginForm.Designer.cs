@@ -31,21 +31,23 @@
             this.MainPanel = new System.Windows.Forms.Panel();
             this.ButtonLogin = new System.Windows.Forms.Button();
             this.PasswordField = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LoginField = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.registerlabel = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MainPanel.Controls.Add(this.registerlabel);
             this.MainPanel.Controls.Add(this.ButtonLogin);
             this.MainPanel.Controls.Add(this.PasswordField);
             this.MainPanel.Controls.Add(this.pictureBox2);
@@ -69,7 +71,7 @@
             this.ButtonLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonLogin.Font = new System.Drawing.Font("Book Antiqua", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtonLogin.Location = new System.Drawing.Point(91, 337);
+            this.ButtonLogin.Location = new System.Drawing.Point(56, 337);
             this.ButtonLogin.Name = "ButtonLogin";
             this.ButtonLogin.Size = new System.Drawing.Size(272, 64);
             this.ButtonLogin.TabIndex = 5;
@@ -87,16 +89,6 @@
             this.PasswordField.TabIndex = 4;
             this.PasswordField.UseSystemPasswordChar = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RevievBook.Properties.Resources.password;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 231);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // LoginField
             // 
             this.LoginField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -106,16 +98,6 @@
             this.LoginField.Name = "LoginField";
             this.LoginField.Size = new System.Drawing.Size(272, 64);
             this.LoginField.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RevievBook.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 141);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -155,6 +137,39 @@
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RevievBook.Properties.Resources.password;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 231);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RevievBook.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 141);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // registerlabel
+            // 
+            this.registerlabel.AutoSize = true;
+            this.registerlabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registerlabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerlabel.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerlabel.Location = new System.Drawing.Point(115, 419);
+            this.registerlabel.Name = "registerlabel";
+            this.registerlabel.Size = new System.Drawing.Size(112, 22);
+            this.registerlabel.TabIndex = 6;
+            this.registerlabel.Text = "Регистрация";
+            this.registerlabel.Click += new System.EventHandler(this.registerlabel_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,10 +182,10 @@
             this.Text = "LoginForm";
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,5 +201,6 @@
         private System.Windows.Forms.TextBox LoginField;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ButtonLogin;
+        private System.Windows.Forms.Label registerlabel;
     }
 }

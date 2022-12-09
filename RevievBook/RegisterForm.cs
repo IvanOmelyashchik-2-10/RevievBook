@@ -23,7 +23,7 @@ namespace RevievBook
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void CloseButton_MouseLeave(object sender, EventArgs e)
@@ -125,6 +125,9 @@ namespace RevievBook
             if (command.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Аккаунт был создан");
+                this.Hide();
+                MainForms mainForms = new MainForms();
+                mainForms.Show();
             }
             else
             {
@@ -155,7 +158,12 @@ namespace RevievBook
             }
         }
 
-       
+        private void registerlabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
     }
 }
 

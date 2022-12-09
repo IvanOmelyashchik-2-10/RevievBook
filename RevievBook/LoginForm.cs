@@ -22,7 +22,7 @@ namespace RevievBook
         #region Действия с кнопкой закрытия
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void CloseButton_MouseEnter(object sender, EventArgs e)
@@ -66,12 +66,21 @@ namespace RevievBook
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Yes");
+                this.Hide();
+                MainForms mainForms = new MainForms();
+                mainForms.Show();
             }
             else
             {
-                MessageBox.Show("No");
+                MessageBox.Show("Неверный логин или пароль");
             }
+        }
+
+        private void registerlabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show(); 
         }
     }
 }

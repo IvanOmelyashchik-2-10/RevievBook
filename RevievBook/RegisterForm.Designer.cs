@@ -39,6 +39,7 @@
             this.UserNameField = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Label();
+            this.registerlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -116,6 +117,7 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MainPanel.Controls.Add(this.registerlabel);
             this.MainPanel.Controls.Add(this.UserSurnameField);
             this.MainPanel.Controls.Add(this.UserNameField);
             this.MainPanel.Controls.Add(this.ButtonLogin);
@@ -183,6 +185,19 @@
             this.CloseButton.MouseEnter += new System.EventHandler(this.CloseButton_MouseEnter);
             this.CloseButton.MouseLeave += new System.EventHandler(this.CloseButton_MouseLeave);
             // 
+            // registerlabel
+            // 
+            this.registerlabel.AutoSize = true;
+            this.registerlabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registerlabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerlabel.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerlabel.Location = new System.Drawing.Point(544, 406);
+            this.registerlabel.Name = "registerlabel";
+            this.registerlabel.Size = new System.Drawing.Size(116, 22);
+            this.registerlabel.TabIndex = 8;
+            this.registerlabel.Text = "Авторизация";
+            this.registerlabel.Click += new System.EventHandler(this.registerlabel_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,5 +230,6 @@
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.TextBox UserSurnameField;
         private System.Windows.Forms.TextBox UserNameField;
+        private System.Windows.Forms.Label registerlabel;
     }
 }
